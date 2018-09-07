@@ -11,6 +11,8 @@ import { timeago, monthDayYearAtTime } from '../../../modules/dates';
 import Loading from '../../components/Loading/Loading';
 import BlankState from '../../components/BlankState/BlankState';
 
+import CRUDTable from './Reactabular/CRUD';
+
 const StyledDocuments = styled.div`
   table tbody tr td {
     vertical-align: middle;
@@ -35,6 +37,9 @@ const Documents = ({
   <StyledDocuments>
     <div className="page-header clearfix">
       <h4 className="pull-left">Documents</h4>
+      <br />
+      <CRUDTable />
+      <br />
       <Link className="btn btn-success pull-right" to={`${match.url}/new`}>Add Document</Link>
     </div>
     {documents.length ?
